@@ -198,7 +198,7 @@ function doQuickBook(cid){
 
 function renderBookings(){
   if(curTab!=='booking')return;const ct=document.getElementById('view-booking');
-  let list=isAdmin()?bookings:bookings.filter(b=>b.uid===curUser?.id);
+  let list=isAdmin()?bookings:bookings.filter(b=>b.uid===curUser?.id&&b.status==='booked');
   if(!list.length){ct.innerHTML='<div class="empty"><span class="icon">馃摥</span>鏆傛棤棰勭害璁板綍</div>';return;}
   ct.innerHTML=list.sort((a,b)=>new Date(b.time)-new Date(a.time)).map(b=>{const c=courses.find(x=>x.id===b.cid)||{};return`<div class="card"><div class="flex mb-8"><span class="tag ${b.status==='booked'?'tag-green':''}">${b.status==='booked'?'宸查绾?:'宸插彇娑?}</span><span class="text-gray">${new Date(b.time).toLocaleDateString()}</span></div><p style="padding:4px 0;font-size:15px">馃搮 ${fmtDs(c.date)}</p><p style="padding:4px 0;font-size:15px">鈴?${c.start||''}-${c.end||''}</p>${isAdmin()?`<div class="act-divide"><div class="info-row"><span class="lbl">瀛﹀憳</span><span class="val">${b.child}</span></div>${b.grade?`<div class="info-row"><span class="lbl">骞寸骇</span><span class="val">${b.grade}</span></div>`:''}<div class="info-row"><span class="lbl">瀹堕暱</span><span class="val">${b.parent}</span></div><div class="info-row"><span class="lbl">鐢佃瘽</span><span class="val tel">${b.phone}</span></div></div>`:`<p style="padding:4px 0;font-size:15px">馃 ${b.child||b.parent} ${b.grade||''}</p>`}${b.status==='booked'?`<div class="flex mt-10"><span></span><span class="btn btn-sm btn-outline" onclick="cancelBk('${b.id}')">鍙栨秷棰勭害</span></div>`:''}</div>`;}).join('');
 }
