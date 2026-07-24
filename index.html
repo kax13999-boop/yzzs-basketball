@@ -176,10 +176,10 @@ function renderAll(){renderCourses();renderBookings();renderAdmin();document.get
 
 function renderCourses(){
   if(curTab!=='course')return;
-  const ct=document.getElementById('view-course');const now=new Date(),ts=now.toDateString(),we=new Date(now.getTime()+7*864e5),nw=new Date(now.getTime()+14*864e5);
+  const ct=document.getElementById('view-course');const now=new Date(),ts=now.toDateString();const dow=now.getDay();const mon=new Date(now.getTime()-(dow===0?6:dow-1)*864e5);mon.setHours(0,0,0,0);const sun=new Date(mon.getTime()+6*864e5);sun.setHours(23,59,59,999);const nMon=new Date(mon.getTime()+7*864e5);const nSun=new Date(sun.getTime()+7*864e5);
   let list=courses.filter(c=>c.status!=='cancelled'&&c.status!=='pending_review');
   if(curFilter==='today')list=list.filter(c=>new Date(c.date).toDateString()===ts);
-  if(curFilter==='week')list=list.filter(c=>{const d=new Date(c.date);return d>=now&&d<=we;});if(curFilter==='next')list=list.filter(c=>{const d=new Date(c.date);return d>we&&d<=nw;});
+  if(curFilter==='week')list=list.filter(c=>{const d=new Date(c.date);return d>=mon&&d<=sun;});if(curFilter==='next')list=list.filter(c=>{const d=new Date(c.date);return d>=nMon&&d<=nSun;});
   if(!list.length){ct.innerHTML='<div class="empty"><span class="icon">📋</span>暂无课程</div>';return;}
   ct.innerHTML=list.map(c=>{const myBk=bookings.find(b=>b.cid===c.id&&b.uid===curUser?.id&&b.status==='booked');const full=c.cur>=c.max&&!myBk;const booked=!!myBk;return`<div class="card course-item"><div class="head flex"><span class="tag ${booked?'tag-green':c.status==='open'?'tag-red':'tag-yellow'}">${booked?'已预约':c.status==='open'?'可预约':'已满员'}</span>${c.coach?`<span class="text-sm">🧑‍🏫 ${c.coach}</span>`:''}</div><div class="body"><p>📅 ${fmtDs(c.date)}</p><p>⏰ ${c.start} - ${c.end}</p>${c.note?`<p class="text-sm">📝 ${c.note}</p>`:''}</div><div class="foot"><span>👥 已预约 <span class="red-num">${c.cur}</span>/${c.max} 人</span>${isSuperAdmin()?``:booked?`<span class="btn btn-sm btn-outline" onclick="cancelBk('${myBk.id}')">取消预约</span>`:full?``:`<span class="remain" onclick="doQuickBook('${c.id}')">立即预约</span>`}</div></div>`;}).join('');
 }
