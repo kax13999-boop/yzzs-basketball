@@ -88,7 +88,7 @@ body{font-family:'PingFang SC','Helvetica Neue',sans-serif;font-size:15px;color:
   <div class="pending-bar hidden" id="pendingBar">鈴?鏁欑粌璐﹀彿瀹℃牳涓紝璇风瓑寰呯鐞嗗憳瀹℃牳閫氳繃</div>
   <div class="tabs" id="tabBar">
     <div class="tab on" data-t="course" onclick="switchTab('course')">璇剧▼棰勭害</div>
-    <div class="tab" data-t="booking" onclick="switchTab('booking')">鎴戠殑棰勭害</div>
+    <div class="tab" data-t="booking" id="bookingTab" onclick="switchTab('booking')">鎴戠殑棰勭害</div>
     <div class="tab" data-t="admin" onclick="switchTab('admin')">绠＄悊鍚庡彴</div>
   </div>
   <div class="filter" id="filterBar"><span class="f on" data-v="all" onclick="setFilter('all',this)">鍏ㄩ儴</span><span class="f" data-v="today" onclick="setFilter('today',this)">浠婂ぉ</span><span class="f" data-v="week" onclick="setFilter('week',this)">鏈懆</span></div>
@@ -139,6 +139,7 @@ function save(){localStorage.setItem('bb_users',JSON.stringify(users));localStor
 function initDemo(){
   if(!courses.length){courses=[{id:'c1',date:fmtDate(T),start:'09:00',end:'10:30',max:20,cur:3,coach:'鐜嬫暀缁?,status:'open',note:'',by:'u_admin'},{id:'c2',date:fmtDate(T),start:'14:00',end:'15:30',max:15,cur:15,coach:'鏉庢暀缁?,status:'full',note:'鎻愰珮鐝?,by:'u_admin'},{id:'c3',date:tmrw(1),start:'10:00',end:'11:30',max:20,cur:5,coach:'鐜嬫暀缁?,status:'open',note:'',by:'u_admin'},{id:'c4',date:tmrw(2),start:'09:00',end:'10:30',max:25,cur:8,coach:'寮犳暀缁?,status:'open',note:'鍩虹鐝?,by:'u_admin'},{id:'c5',date:tmrw(3),start:'16:00',end:'17:30',max:20,cur:3,coach:'鏉庢暀缁?,status:'open',note:'鍛ㄦ湯鐗硅',by:'u_admin'},{id:'c6',date:tmrw(5),start:'09:00',end:'11:00',max:30,cur:18,coach:'鐜嬫暀缁?,status:'open',note:'鏆戞湡闆嗚',by:'u_admin'}];}
   if(!users.length){users=[{id:'u_admin',openid:'admin',name:'绠＄悊鍛?,phone:ADMIN_PHONE,role:'admin',status:'approved'}];}
+if(!bookings.length&&courses.length){bookings=[{id:'b1',uid:'u1',cid:courses[0].id,child:'灏忔槑',grade:'涓夊勾绾?,parent:'鐖哥埜',phone:'13800001111',note:'',status:'booked',time:new Date(Date.now()-864e5).toISOString()},{id:'b2',uid:'u2',cid:courses[0].id,child:'灏忕孩',grade:'浜斿勾绾?,parent:'濡堝',phone:'13900002222',note:'',status:'booked',time:new Date().toISOString()}];}
   save();
 }
 initDemo();
@@ -164,7 +165,7 @@ function doRegister(){
 }
 function enterApp(){document.getElementById('loginView').classList.add('hidden');document.getElementById('mainView').classList.remove('hidden');document.getElementById('pendingBar').classList.add('hidden');updateUI();renderAll();}
 function logout(){curUser=null;localStorage.removeItem('bb_curUser');save();document.getElementById('mainView').classList.add('hidden');document.getElementById('loginView').classList.remove('hidden');backStep1();}
-function updateUI(){if(!curUser)return;document.getElementById('tabBar').querySelectorAll('.tab')[2].style.display=isAdmin()?'':'none';}
+function updateUI(){if(!curUser)return;document.getElementById('tabBar').querySelectorAll('.tab')[2].style.display=isAdmin()?'':'none';document.getElementById('bookingTab').textContent=isAdmin()?'鍏ㄩ儴棰勭害':'鎴戠殑棰勭害';}
 
 // TABS
 function switchTab(t){curTab=t;document.getElementById('tabBar').querySelectorAll('.tab').forEach(e=>e.classList.toggle('on',e.dataset.t===t));document.getElementById('fab').classList.toggle('hidden',!isAdmin()||t!=='course');renderAll();}
