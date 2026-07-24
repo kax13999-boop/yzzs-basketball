@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>兖州勇士篮球</title>
+<title>鍏栧窞鍕囧＋绡悆</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--red:#E84020;--green:#07C160;--warn:#F0A030;--gray:#999}
@@ -42,84 +42,84 @@ body{font-family:'PingFang SC','Helvetica Neue',sans-serif;font-size:15px;color:
 
 <!-- LOGIN -->
 <div id="loginView">
-  <div class="login-top"><span class="ball">🏀</span><h2>兖州勇士篮球</h2><p class="sub">勇士精神，从这里开始</p></div>
+  <div class="login-top"><span class="ball">馃弨</span><h2>鍏栧窞鍕囧＋绡悆</h2><p class="sub">鍕囧＋绮剧锛屼粠杩欓噷寮€濮?/p></div>
   <div id="loginStep1" class="login-box card">
-    <p style="text-align:center;font-weight:600;margin-bottom:14px;font-size:16px">选择身份登录</p>
-    <button class="btn btn-red" onclick="goPhone('parent','家长')">👨‍👩‍👧 家长登录</button>
-    <button class="btn btn-yellow mt-12" onclick="goPhone('coach','教练员')">🧑‍🏫 教练员登录</button>
-    <button class="btn btn-dark mt-12" onclick="showAdminVerify()">⚙️ 管理员登录</button>
+    <p style="text-align:center;font-weight:600;margin-bottom:14px;font-size:16px">閫夋嫨韬唤鐧诲綍</p>
+    <button class="btn btn-red" onclick="goPhone('parent','瀹堕暱')">馃懆鈥嶐煈┾€嶐煈?瀹堕暱鐧诲綍</button>
+    <button class="btn btn-yellow mt-12" onclick="goPhone('coach','鏁欑粌鍛?)">馃鈥嶐煆?鏁欑粌鍛樼櫥褰?/button>
+    <button class="btn btn-dark mt-12" onclick="showAdminVerify()">鈿欙笍 绠＄悊鍛樼櫥褰?/button>
   </div>
   <div id="loginAdmin" class="login-box card hidden">
-    <p style="text-align:center;font-weight:600;margin-bottom:14px;font-size:16px">管理员验证</p>
-    <div style="display:flex;align-items:center;padding:8px 0;border-bottom:2px solid #eee;margin-bottom:16px"><span style="color:#999;margin-right:10px">📱</span><input type="tel" id="adminPhoneInput" maxlength="11" placeholder="请输入管理员手机号" onkeydown="if(event.key==='Enter')verifyAdmin()"></div>
-    <button class="btn btn-dark" onclick="verifyAdmin()">验证登录</button>
-    <p class="text-gray mt-12" style="text-align:center;cursor:pointer" onclick="backStep1()">‹ 返回</p>
+    <p style="text-align:center;font-weight:600;margin-bottom:14px;font-size:16px">绠＄悊鍛橀獙璇?/p>
+    <div style="display:flex;align-items:center;padding:8px 0;border-bottom:2px solid #eee;margin-bottom:16px"><span style="color:#999;margin-right:10px">馃摫</span><input type="tel" id="adminPhoneInput" maxlength="11" placeholder="璇疯緭鍏ョ鐞嗗憳鎵嬫満鍙? onkeydown="if(event.key==='Enter')verifyAdmin()"></div>
+    <button class="btn btn-dark" onclick="verifyAdmin()">楠岃瘉鐧诲綍</button>
+    <p class="text-gray mt-12" style="text-align:center;cursor:pointer" onclick="backStep1()">鈥?杩斿洖</p>
   </div>
   <div id="loginStep2" class="login-box card hidden">
-    <p style="text-align:center;font-weight:600;margin-bottom:14px;font-size:16px"><span id="phoneRoleLabel"></span>登录</p>
-    <div style="display:flex;align-items:center;padding:8px 0;border-bottom:2px solid #eee;margin-bottom:16px"><span style="color:#999;margin-right:10px">📱</span><input type="tel" id="phoneInput" maxlength="11" placeholder="请输入手机号" onkeydown="if(event.key==='Enter')checkPhone()"></div>
-    <button class="btn btn-red" onclick="checkPhone()">下一步</button>
-    <p class="text-gray mt-12" style="text-align:center">新用户自动注册，老用户直接登录</p>
-    <p class="text-gray mt-8" style="text-align:center;cursor:pointer" onclick="backStep1()">‹ 返回</p>
+    <p style="text-align:center;font-weight:600;margin-bottom:14px;font-size:16px"><span id="phoneRoleLabel"></span>鐧诲綍</p>
+    <div style="display:flex;align-items:center;padding:8px 0;border-bottom:2px solid #eee;margin-bottom:16px"><span style="color:#999;margin-right:10px">馃摫</span><input type="tel" id="phoneInput" maxlength="11" placeholder="璇疯緭鍏ユ墜鏈哄彿" onkeydown="if(event.key==='Enter')checkPhone()"></div>
+    <button class="btn btn-red" onclick="checkPhone()">涓嬩竴姝?/button>
+    <p class="text-gray mt-12" style="text-align:center">鏂扮敤鎴疯嚜鍔ㄦ敞鍐岋紝鑰佺敤鎴风洿鎺ョ櫥褰?/p>
+    <p class="text-gray mt-8" style="text-align:center;cursor:pointer" onclick="backStep1()">鈥?杩斿洖</p>
   </div>
   <div id="loginStep3" class="login-box card hidden">
-    <p style="text-align:center;font-weight:600;margin-bottom:12px;font-size:16px">首次使用 · <span id="regRoleLabel"></span>注册</p>
-    <div class="f-row" style="padding:8px 0"><label>手机号</label><span style="color:var(--gray)" id="regPhoneShow"></span></div>
-    <div id="regCoachArea" class="hidden"><div class="f-row" style="padding:8px 0"><label>教练姓名</label><input id="regName" placeholder="请输入教练姓名"></div></div>
+    <p style="text-align:center;font-weight:600;margin-bottom:12px;font-size:16px">棣栨浣跨敤 路 <span id="regRoleLabel"></span>娉ㄥ唽</p>
+    <div class="f-row" style="padding:8px 0"><label>鎵嬫満鍙?/label><span style="color:var(--gray)" id="regPhoneShow"></span></div>
+    <div id="regCoachArea" class="hidden"><div class="f-row" style="padding:8px 0"><label>鏁欑粌濮撳悕</label><input id="regName" placeholder="璇疯緭鍏ユ暀缁冨鍚?></div></div>
     <div id="regParentArea" class="hidden">
-      <div class="f-row" style="padding:8px 0"><label>与孩子关系</label><select id="regRelation"><option>孩子爸爸</option><option>孩子妈妈</option><option>孩子爷爷</option><option>孩子奶奶</option><option>孩子姥爷</option><option>孩子姥姥</option></select></div>
-      <div class="f-row" style="padding:8px 0"><label>孩子姓名</label><input id="regChild" placeholder="请输入孩子姓名"></div>
-      <div class="f-row" style="padding:8px 0"><label>所在年级</label><select id="regGrade"><option>幼儿园</option><option>一年级</option><option selected>二年级</option><option>三年级</option><option>四年级</option><option>五年级</option><option>六年级</option><option>初一</option><option>初二</option><option>初三</option></select></div>
+      <div class="f-row" style="padding:8px 0"><label>涓庡瀛愬叧绯?/label><select id="regRelation"><option>瀛╁瓙鐖哥埜</option><option>瀛╁瓙濡堝</option><option>瀛╁瓙鐖风埛</option><option>瀛╁瓙濂跺ザ</option><option>瀛╁瓙濮ョ埛</option><option>瀛╁瓙濮ュД</option></select></div>
+      <div class="f-row" style="padding:8px 0"><label>瀛╁瓙濮撳悕</label><input id="regChild" placeholder="璇疯緭鍏ュ瀛愬鍚?></div>
+      <div class="f-row" style="padding:8px 0"><label>鎵€鍦ㄥ勾绾?/label><select id="regGrade"><option>骞煎効鍥?/option><option>涓€骞寸骇</option><option selected>浜屽勾绾?/option><option>涓夊勾绾?/option><option>鍥涘勾绾?/option><option>浜斿勾绾?/option><option>鍏勾绾?/option><option>鍒濅竴</option><option>鍒濅簩</option><option>鍒濅笁</option></select></div>
     </div>
-    <p class="text-gray mt-12" style="text-align:center" id="regHint">提交后需等待管理员审核</p>
-    <button class="btn btn-red mt-8" onclick="doRegister()">提交注册</button>
-    <p class="text-gray mt-12" style="text-align:center;cursor:pointer" onclick="backStep2()">‹ 返回修改手机号</p>
+    <p class="text-gray mt-12" style="text-align:center" id="regHint">鎻愪氦鍚庨渶绛夊緟绠＄悊鍛樺鏍?/p>
+    <button class="btn btn-red mt-8" onclick="doRegister()">鎻愪氦娉ㄥ唽</button>
+    <p class="text-gray mt-12" style="text-align:center;cursor:pointer" onclick="backStep2()">鈥?杩斿洖淇敼鎵嬫満鍙?/p>
   </div>
   <div id="loginStep4" class="login-box card hidden" style="text-align:center">
-    <span style="font-size:56px;display:block;margin:16px 0 10px">⏳</span><p style="font-weight:600;font-size:17px">审核中</p>
-    <p class="text-gray mt-12" style="line-height:1.6">您的教练账号（<span id="pendingPhone"></span>）<br>正在等待管理员审核</p>
-    <button class="btn btn-outline mt-20" onclick="backStep1()">‹ 返回首页</button>
+    <span style="font-size:56px;display:block;margin:16px 0 10px">鈴?/span><p style="font-weight:600;font-size:17px">瀹℃牳涓?/p>
+    <p class="text-gray mt-12" style="line-height:1.6">鎮ㄧ殑鏁欑粌璐﹀彿锛?span id="pendingPhone"></span>锛?br>姝ｅ湪绛夊緟绠＄悊鍛樺鏍?/p>
+    <button class="btn btn-outline mt-20" onclick="backStep1()">鈥?杩斿洖棣栭〉</button>
   </div>
 </div>
 
 <!-- MAIN APP -->
 <div id="mainView" class="hidden">
-  <div class="header"><div><h1>🏀 兖州勇士篮球</h1><p class="sub">预约训练课程，开启勇士之旅</p><p class="logout-link" onclick="logout()">退出登录</p></div></div>
-  <div class="pending-bar hidden" id="pendingBar">⏳ 教练账号审核中，请等待管理员审核通过</div>
+  <div class="header"><div><h1>馃弨 鍏栧窞鍕囧＋绡悆</h1><p class="sub">棰勭害璁粌璇剧▼锛屽紑鍚媷澹箣鏃?/p><p class="logout-link" onclick="logout()">閫€鍑虹櫥褰?/p></div></div>
+  <div class="pending-bar hidden" id="pendingBar">鈴?鏁欑粌璐﹀彿瀹℃牳涓紝璇风瓑寰呯鐞嗗憳瀹℃牳閫氳繃</div>
   <div class="tabs" id="tabBar">
-    <div class="tab on" data-t="course" onclick="switchTab('course')">课程预约</div>
-    <div class="tab" data-t="booking" onclick="switchTab('booking')">我的预约</div>
-    <div class="tab" data-t="admin" onclick="switchTab('admin')">管理后台</div>
+    <div class="tab on" data-t="course" onclick="switchTab('course')">璇剧▼棰勭害</div>
+    <div class="tab" data-t="booking" onclick="switchTab('booking')">鎴戠殑棰勭害</div>
+    <div class="tab" data-t="admin" onclick="switchTab('admin')">绠＄悊鍚庡彴</div>
   </div>
-  <div class="filter" id="filterBar"><span class="f on" data-v="all" onclick="setFilter('all',this)">全部</span><span class="f" data-v="today" onclick="setFilter('today',this)">今天</span><span class="f" data-v="week" onclick="setFilter('week',this)">本周</span></div>
+  <div class="filter" id="filterBar"><span class="f on" data-v="all" onclick="setFilter('all',this)">鍏ㄩ儴</span><span class="f" data-v="today" onclick="setFilter('today',this)">浠婂ぉ</span><span class="f" data-v="week" onclick="setFilter('week',this)">鏈懆</span></div>
   <div id="view-course"></div><div id="view-booking" class="hidden"></div><div id="view-admin" class="hidden"></div>
   <div class="fab hidden" id="fab" onclick="openAddCourse()">+</div>
 </div>
 
 <!-- ADD COURSE MODAL -->
 <div class="modal-mask hidden" id="editUserModal" onclick="closeEditUser()">
-  <div class="modal-box" onclick="event.stopPropagation()"><h3>编辑用户信息</h3>
+  <div class="modal-box" onclick="event.stopPropagation()"><h3>缂栬緫鐢ㄦ埛淇℃伅</h3>
     <input type="hidden" id="editUserId">
-    <div class="f-row"><label>姓名/称呼</label><input id="editName"></div>
-    <div class="f-row"><label>手机号</label><input type="tel" id="editPhone"></div>
+    <div class="f-row"><label>濮撳悕/绉板懠</label><input id="editName"></div>
+    <div class="f-row"><label>鎵嬫満鍙?/label><input type="tel" id="editPhone"></div>
     <div id="editParentFields" class="hidden">
-      <div class="f-row"><label>孩子姓名</label><input id="editChild"></div>
-      <div class="f-row"><label>年级</label><input id="editGrade"></div>
-      <div class="f-row"><label>关系</label><select id="editRelation"><option>孩子爸爸</option><option>孩子妈妈</option><option>孩子爷爷</option><option>孩子奶奶</option><option>孩子姥爷</option><option>孩子姥姥</option></select></div>
+      <div class="f-row"><label>瀛╁瓙濮撳悕</label><input id="editChild"></div>
+      <div class="f-row"><label>骞寸骇</label><input id="editGrade"></div>
+      <div class="f-row"><label>鍏崇郴</label><select id="editRelation"><option>瀛╁瓙鐖哥埜</option><option>瀛╁瓙濡堝</option><option>瀛╁瓙鐖风埛</option><option>瀛╁瓙濂跺ザ</option><option>瀛╁瓙濮ョ埛</option><option>瀛╁瓙濮ュД</option></select></div>
     </div>
-    <div class="f-btns"><button class="btn btn-outline" onclick="closeEditUser()">取消</button><button class="btn btn-red" onclick="saveEditUser()">保存</button></div>
+    <div class="f-btns"><button class="btn btn-outline" onclick="closeEditUser()">鍙栨秷</button><button class="btn btn-red" onclick="saveEditUser()">淇濆瓨</button></div>
   </div>
 </div>
 
 <div class="modal-mask hidden" id="addModal" onclick="closeAdd()">
-  <div class="modal-box" onclick="event.stopPropagation()"><h3>添加课程</h3>
-    <div class="f-row"><label>日期</label><input type="date" id="acDate"></div>
-    <div class="f-row"><label>开始</label><input type="time" id="acStart" value="09:00"></div>
-    <div class="f-row"><label>结束</label><input type="time" id="acEnd" value="10:30"></div>
-    <div class="f-row"><label>名额</label><input type="number" id="acMax" value="20" min="1"></div>
-    <div class="f-row"><label>教练</label><input type="text" id="acCoach" placeholder="教练姓名"></div>
-    <div class="f-row"><label>备注</label><input type="text" id="acNote" placeholder="选填"></div>
-    <div class="f-btns"><button class="btn btn-outline" onclick="closeAdd()">取消</button><button class="btn btn-red" onclick="addCourse()">确认添加</button></div>
+  <div class="modal-box" onclick="event.stopPropagation()"><h3>娣诲姞璇剧▼</h3>
+    <div class="f-row"><label>鏃ユ湡</label><input type="date" id="acDate"></div>
+    <div class="f-row"><label>寮€濮?/label><input type="time" id="acStart" value="09:00"></div>
+    <div class="f-row"><label>缁撴潫</label><input type="time" id="acEnd" value="10:30"></div>
+    <div class="f-row"><label>鍚嶉</label><input type="number" id="acMax" value="20" min="1"></div>
+    <div class="f-row"><label>鏁欑粌</label><input type="text" id="acCoach" placeholder="鏁欑粌濮撳悕"></div>
+    <div class="f-row"><label>澶囨敞</label><input type="text" id="acNote" placeholder="閫夊～"></div>
+    <div class="f-btns"><button class="btn btn-outline" onclick="closeAdd()">鍙栨秷</button><button class="btn btn-red" onclick="addCourse()">纭娣诲姞</button></div>
   </div>
 </div>
 
@@ -137,30 +137,30 @@ let curTab='course',curFilter='all',tmpPhone='',tmpRole='',tmpRoleName='';
 
 function save(){localStorage.setItem('bb_users',JSON.stringify(users));localStorage.setItem('bb_courses',JSON.stringify(courses));localStorage.setItem('bb_bookings',JSON.stringify(bookings));if(curUser)localStorage.setItem('bb_curUser',JSON.stringify(curUser));}
 function initDemo(){
-  if(!courses.length){courses=[{id:'c1',date:fmtDate(T),start:'09:00',end:'10:30',max:20,cur:3,coach:'王教练',status:'open',note:'',by:'u_admin'},{id:'c2',date:fmtDate(T),start:'14:00',end:'15:30',max:15,cur:15,coach:'李教练',status:'full',note:'提高班',by:'u_admin'},{id:'c3',date:tmrw(1),start:'10:00',end:'11:30',max:20,cur:5,coach:'王教练',status:'open',note:'',by:'u_admin'},{id:'c4',date:tmrw(2),start:'09:00',end:'10:30',max:25,cur:8,coach:'张教练',status:'open',note:'基础班',by:'u_admin'},{id:'c5',date:tmrw(3),start:'16:00',end:'17:30',max:20,cur:3,coach:'李教练',status:'open',note:'周末特训',by:'u_admin'},{id:'c6',date:tmrw(5),start:'09:00',end:'11:00',max:30,cur:18,coach:'王教练',status:'open',note:'暑期集训',by:'u_admin'}];}
-  if(!users.length){users=[{id:'u_admin',openid:'admin',name:'管理员',phone:ADMIN_PHONE,role:'admin',status:'approved'}];}
+  if(!courses.length){courses=[{id:'c1',date:fmtDate(T),start:'09:00',end:'10:30',max:20,cur:3,coach:'鐜嬫暀缁?,status:'open',note:'',by:'u_admin'},{id:'c2',date:fmtDate(T),start:'14:00',end:'15:30',max:15,cur:15,coach:'鏉庢暀缁?,status:'full',note:'鎻愰珮鐝?,by:'u_admin'},{id:'c3',date:tmrw(1),start:'10:00',end:'11:30',max:20,cur:5,coach:'鐜嬫暀缁?,status:'open',note:'',by:'u_admin'},{id:'c4',date:tmrw(2),start:'09:00',end:'10:30',max:25,cur:8,coach:'寮犳暀缁?,status:'open',note:'鍩虹鐝?,by:'u_admin'},{id:'c5',date:tmrw(3),start:'16:00',end:'17:30',max:20,cur:3,coach:'鏉庢暀缁?,status:'open',note:'鍛ㄦ湯鐗硅',by:'u_admin'},{id:'c6',date:tmrw(5),start:'09:00',end:'11:00',max:30,cur:18,coach:'鐜嬫暀缁?,status:'open',note:'鏆戞湡闆嗚',by:'u_admin'}];}
+  if(!users.length){users=[{id:'u_admin',openid:'admin',name:'绠＄悊鍛?,phone:ADMIN_PHONE,role:'admin',status:'approved'}];}
   save();
 }
 initDemo();
 
 function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),1600);}
-function fmtDs(s){if(!s)return'';const d=new Date(s);const w=['周日','周一','周二','周三','周四','周五','周六'];return `${d.getMonth()+1}月${d.getDate()}日 ${w[d.getDay()]}`;}
+function fmtDs(s){if(!s)return'';const d=new Date(s);const w=['鍛ㄦ棩','鍛ㄤ竴','鍛ㄤ簩','鍛ㄤ笁','鍛ㄥ洓','鍛ㄤ簲','鍛ㄥ叚'];return `${d.getMonth()+1}鏈?{d.getDate()}鏃?${w[d.getDay()]}`;}
 function isAdmin(){return curUser&&(curUser.role==='admin'||curUser.role==='coach');}
 function isSuperAdmin(){return curUser&&curUser.role==='admin';}
 
 // LOGIN
 function showAdminVerify(){document.getElementById('loginStep1').classList.add('hidden');document.getElementById('loginAdmin').classList.remove('hidden');setTimeout(()=>document.getElementById('adminPhoneInput').focus(),200);}
-function verifyAdmin(){const p=document.getElementById('adminPhoneInput').value.replace(/\s/g,'');if(p!==ADMIN_PHONE){toast('手机号不正确');return;}localStorage.setItem('bb_adminVerified','1');let u=users.find(u=>u.role==='admin');if(!u){u={id:'u_admin',openid:'admin',name:'管理员',phone:ADMIN_PHONE,role:'admin',status:'approved'};users.push(u);}curUser=u;save();enterApp();}
+function verifyAdmin(){const p=document.getElementById('adminPhoneInput').value.replace(/\s/g,'');if(p!==ADMIN_PHONE){toast('鎵嬫満鍙蜂笉姝ｇ‘');return;}localStorage.setItem('bb_adminVerified','1');let u=users.find(u=>u.role==='admin');if(!u){u={id:'u_admin',openid:'admin',name:'绠＄悊鍛?,phone:ADMIN_PHONE,role:'admin',status:'approved'};users.push(u);}curUser=u;save();enterApp();}
 function goPhone(r,n){tmpRole=r;tmpRoleName=n;document.getElementById('phoneRoleLabel').textContent=n;document.getElementById('loginStep1').classList.add('hidden');document.getElementById('loginStep2').classList.remove('hidden');setTimeout(()=>document.getElementById('phoneInput').focus(),200);}
 function backStep1(){['loginAdmin','loginStep2','loginStep3','loginStep4'].forEach(id=>document.getElementById(id).classList.add('hidden'));document.getElementById('loginStep1').classList.remove('hidden');}
 function backStep2(){document.getElementById('loginStep3').classList.add('hidden');document.getElementById('loginStep4').classList.add('hidden');document.getElementById('loginStep2').classList.remove('hidden');}
-function checkPhone(){const p=document.getElementById('phoneInput').value.replace(/\s/g,'');if(!/^1\d{10}$/.test(p)){toast('请输入正确的手机号');return;}tmpPhone=p;const exist=users.find(u=>u.phone===p&&u.role===tmpRole);if(exist){if(exist.status==='approved'||(exist.status==='pending'&&exist.role==='parent')){curUser=exist;save();enterApp();}else if(exist.status==='pending'){document.getElementById('pendingPhone').textContent=p;document.getElementById('loginStep2').classList.add('hidden');document.getElementById('loginStep4').classList.remove('hidden');}else{toast('账号已被禁用');}}else{document.getElementById('regPhoneShow').textContent=p;document.getElementById('regRoleLabel').textContent=tmpRoleName;document.getElementById('regCoachArea').classList.toggle('hidden',tmpRole!=='coach');document.getElementById('regParentArea').classList.toggle('hidden',tmpRole!=='parent');document.getElementById('regHint').textContent=tmpRole==='parent'?'家长注册后直接可用':'提交后需等待管理员审核';document.getElementById('loginStep2').classList.add('hidden');document.getElementById('loginStep3').classList.remove('hidden');}}
+function checkPhone(){const p=document.getElementById('phoneInput').value.replace(/\s/g,'');if(!/^1\d{10}$/.test(p)){toast('璇疯緭鍏ユ纭殑鎵嬫満鍙?);return;}tmpPhone=p;const exist=users.find(u=>u.phone===p&&u.role===tmpRole);if(exist){if(exist.status==='approved'||(exist.status==='pending'&&exist.role==='parent')){curUser=exist;save();enterApp();}else if(exist.status==='pending'){document.getElementById('pendingPhone').textContent=p;document.getElementById('loginStep2').classList.add('hidden');document.getElementById('loginStep4').classList.remove('hidden');}else{toast('璐﹀彿宸茶绂佺敤');}}else{document.getElementById('regPhoneShow').textContent=p;document.getElementById('regRoleLabel').textContent=tmpRoleName;document.getElementById('regCoachArea').classList.toggle('hidden',tmpRole!=='coach');document.getElementById('regParentArea').classList.toggle('hidden',tmpRole!=='parent');document.getElementById('regHint').textContent=tmpRole==='parent'?'瀹堕暱娉ㄥ唽鍚庣洿鎺ュ彲鐢?:'鎻愪氦鍚庨渶绛夊緟绠＄悊鍛樺鏍?;document.getElementById('loginStep2').classList.add('hidden');document.getElementById('loginStep3').classList.remove('hidden');}}
 function doRegister(){
-  if(tmpRole==='coach'){if(!document.getElementById('regName').value.trim()){toast('请填写教练姓名');return;}}
-  if(tmpRole==='parent'){if(!document.getElementById('regChild').value.trim()){toast('请填写孩子姓名');return;}}
+  if(tmpRole==='coach'){if(!document.getElementById('regName').value.trim()){toast('璇峰～鍐欐暀缁冨鍚?);return;}}
+  if(tmpRole==='parent'){if(!document.getElementById('regChild').value.trim()){toast('璇峰～鍐欏瀛愬鍚?);return;}}
   const user={id:'u'+Date.now(),openid:tmpRole+Date.now(),name:tmpRole==='parent'?document.getElementById('regRelation').value:document.getElementById('regName').value.trim(),phone:tmpPhone,role:tmpRole,status:'pending',childName:document.getElementById('regChild')?.value||'',childGrade:document.getElementById('regGrade')?.value||'',relation:document.getElementById('regRelation')?.value||'',createdAt:new Date().toISOString()};
   users.push(user);curUser=user;save();
-  if(tmpRole==='parent'){enterApp();toast('注册成功');}else{document.getElementById('loginView').classList.add('hidden');document.getElementById('mainView').classList.remove('hidden');document.getElementById('pendingBar').classList.remove('hidden');updateUI();renderAll();toast('注册成功，等待管理员审核');}
+  if(tmpRole==='parent'){enterApp();toast('娉ㄥ唽鎴愬姛');}else{document.getElementById('loginView').classList.add('hidden');document.getElementById('mainView').classList.remove('hidden');document.getElementById('pendingBar').classList.remove('hidden');updateUI();renderAll();toast('娉ㄥ唽鎴愬姛锛岀瓑寰呯鐞嗗憳瀹℃牳');}
 }
 function enterApp(){document.getElementById('loginView').classList.add('hidden');document.getElementById('mainView').classList.remove('hidden');document.getElementById('pendingBar').classList.add('hidden');updateUI();renderAll();}
 function logout(){curUser=null;localStorage.removeItem('bb_curUser');save();document.getElementById('mainView').classList.add('hidden');document.getElementById('loginView').classList.remove('hidden');backStep1();}
@@ -179,63 +179,63 @@ function renderCourses(){
   let list=courses.filter(c=>c.status!=='cancelled'&&c.status!=='pending_review');
   if(curFilter==='today')list=list.filter(c=>new Date(c.date).toDateString()===ts);
   if(curFilter==='week')list=list.filter(c=>{const d=new Date(c.date);return d>=now&&d<=we;});
-  if(!list.length){ct.innerHTML='<div class="empty"><span class="icon">📋</span>暂无课程</div>';return;}
-  ct.innerHTML=list.map(c=>{const myBk=bookings.find(b=>b.cid===c.id&&b.uid===curUser?.id&&b.status==='booked');const full=c.cur>=c.max&&!myBk;const booked=!!myBk;return`<div class="card course-item"><div class="head flex"><span class="tag ${booked?'tag-green':c.status==='open'?'tag-red':'tag-yellow'}">${booked?'已预约':c.status==='open'?'可预约':'已满员'}</span>${c.coach?`<span class="text-sm">🧑‍🏫 ${c.coach}</span>`:''}</div><div class="body"><p>📅 ${fmtDs(c.date)}</p><p>⏰ ${c.start} - ${c.end}</p>${c.note?`<p class="text-sm">📝 ${c.note}</p>`:''}</div><div class="foot"><span>👥 已预约 <span class="red-num">${c.cur}</span>/${c.max} 人</span>${isSuperAdmin()?``:booked?`<span class="btn btn-sm btn-outline" onclick="cancelBk('${myBk.id}')">取消预约</span>`:full?``:`<span class="remain" onclick="doQuickBook('${c.id}')">立即预约</span>`}</div></div>`;}).join('');
+  if(!list.length){ct.innerHTML='<div class="empty"><span class="icon">馃搵</span>鏆傛棤璇剧▼</div>';return;}
+  ct.innerHTML=list.map(c=>{const myBk=bookings.find(b=>b.cid===c.id&&b.uid===curUser?.id&&b.status==='booked');const full=c.cur>=c.max&&!myBk;const booked=!!myBk;return`<div class="card course-item"><div class="head flex"><span class="tag ${booked?'tag-green':c.status==='open'?'tag-red':'tag-yellow'}">${booked?'宸查绾?:c.status==='open'?'鍙绾?:'宸叉弧鍛?}</span>${c.coach?`<span class="text-sm">馃鈥嶐煆?${c.coach}</span>`:''}</div><div class="body"><p>馃搮 ${fmtDs(c.date)}</p><p>鈴?${c.start} - ${c.end}</p>${c.note?`<p class="text-sm">馃摑 ${c.note}</p>`:''}</div><div class="foot"><span>馃懃 宸查绾?<span class="red-num">${c.cur}</span>/${c.max} 浜?/span>${isSuperAdmin()?``:booked?`<span class="btn btn-sm btn-outline" onclick="cancelBk('${myBk.id}')">鍙栨秷棰勭害</span>`:full?``:`<span class="remain" onclick="doQuickBook('${c.id}')">绔嬪嵆棰勭害</span>`}</div></div>`;}).join('');
 }
 
 // ONE-CLICK BOOKING
 function doQuickBook(cid){
-  const c=courses.find(x=>x.id===cid);if(!c||c.cur>=c.max){toast('课程已满员');return;}
-  if(!curUser){toast('请先登录');return;}
-  if(curUser.role==='coach'&&curUser.status!=='approved'){toast('教练账号审核中');return;}
+  const c=courses.find(x=>x.id===cid);if(!c||c.cur>=c.max){toast('璇剧▼宸叉弧鍛?);return;}
+  if(!curUser){toast('璇峰厛鐧诲綍');return;}
+  if(curUser.role==='coach'&&curUser.status!=='approved'){toast('鏁欑粌璐﹀彿瀹℃牳涓?);return;}
 
-  if(!confirm(`确认预约课程？\n\n📅 ${fmtDs(c.date)}\n⏰ ${c.start}-${c.end}\n🧒 ${curUser.childName||''} ${curUser.childGrade||''}\n👤 ${curUser.relation||curUser.name||''}`))return;
+  if(!confirm(`纭棰勭害璇剧▼锛焅n\n馃搮 ${fmtDs(c.date)}\n鈴?${c.start}-${c.end}\n馃 ${curUser.childName||''} ${curUser.childGrade||''}\n馃懁 ${curUser.relation||curUser.name||''}`))return;
 
   bookings.push({id:'b'+Date.now(),uid:curUser.id,cid,child:curUser.childName||'',grade:curUser.childGrade||'',parent:curUser.relation||curUser.name||'',phone:curUser.phone||'',note:'',status:'booked',time:new Date().toISOString()});
   c.cur++;if(c.cur>=c.max)c.status='full';
-  save();toast('预约成功！');renderAll();
+  save();toast('棰勭害鎴愬姛锛?);renderAll();
 }
 
 function renderBookings(){
   if(curTab!=='booking')return;const ct=document.getElementById('view-booking');
   let list=isAdmin()?bookings:bookings.filter(b=>b.uid===curUser?.id);
-  if(!list.length){ct.innerHTML='<div class="empty"><span class="icon">📭</span>暂无预约记录</div>';return;}
-  ct.innerHTML=list.sort((a,b)=>new Date(b.time)-new Date(a.time)).map(b=>{const c=courses.find(x=>x.id===b.cid)||{};return`<div class="card"><div class="flex mb-8"><span class="tag ${b.status==='booked'?'tag-green':''}">${b.status==='booked'?'已预约':'已取消'}</span><span class="text-gray">${new Date(b.time).toLocaleDateString()}</span></div><p style="padding:4px 0;font-size:15px">📅 ${fmtDs(c.date)}</p><p style="padding:4px 0;font-size:15px">⏰ ${c.start||''}-${c.end||''}</p>${isAdmin()?`<div class="act-divide"><div class="info-row"><span class="lbl">学员</span><span class="val">${b.child}</span></div>${b.grade?`<div class="info-row"><span class="lbl">年级</span><span class="val">${b.grade}</span></div>`:''}<div class="info-row"><span class="lbl">家长</span><span class="val">${b.parent}</span></div><div class="info-row"><span class="lbl">电话</span><span class="val tel">${b.phone}</span></div></div>`:`<p style="padding:4px 0;font-size:15px">🧒 ${b.child||b.parent} ${b.grade||''}</p>`}${b.status==='booked'?`<div class="flex mt-10"><span></span><span class="btn btn-sm btn-outline" onclick="cancelBk('${b.id}')">取消预约</span></div>`:''}</div>`;}).join('');
+  if(!list.length){ct.innerHTML='<div class="empty"><span class="icon">馃摥</span>鏆傛棤棰勭害璁板綍</div>';return;}
+  ct.innerHTML=list.sort((a,b)=>new Date(b.time)-new Date(a.time)).map(b=>{const c=courses.find(x=>x.id===b.cid)||{};return`<div class="card"><div class="flex mb-8"><span class="tag ${b.status==='booked'?'tag-green':''}">${b.status==='booked'?'宸查绾?:'宸插彇娑?}</span><span class="text-gray">${new Date(b.time).toLocaleDateString()}</span></div><p style="padding:4px 0;font-size:15px">馃搮 ${fmtDs(c.date)}</p><p style="padding:4px 0;font-size:15px">鈴?${c.start||''}-${c.end||''}</p>${isAdmin()?`<div class="act-divide"><div class="info-row"><span class="lbl">瀛﹀憳</span><span class="val">${b.child}</span></div>${b.grade?`<div class="info-row"><span class="lbl">骞寸骇</span><span class="val">${b.grade}</span></div>`:''}<div class="info-row"><span class="lbl">瀹堕暱</span><span class="val">${b.parent}</span></div><div class="info-row"><span class="lbl">鐢佃瘽</span><span class="val tel">${b.phone}</span></div></div>`:`<p style="padding:4px 0;font-size:15px">馃 ${b.child||b.parent} ${b.grade||''}</p>`}${b.status==='booked'?`<div class="flex mt-10"><span></span><span class="btn btn-sm btn-outline" onclick="cancelBk('${b.id}')">鍙栨秷棰勭害</span></div>`:''}</div>`;}).join('');
 }
-function cancelBk(bid){if(!confirm('确定取消吗？'))return;const b=bookings.find(x=>x.id===bid);if(b)b.status='cancelled';const c=courses.find(x=>x.id===b.cid);if(c&&c.cur>0){c.cur--;if(c.cur<c.max)c.status='open';}save();renderAll();toast('已取消');}
+function cancelBk(bid){if(!confirm('纭畾鍙栨秷鍚楋紵'))return;const b=bookings.find(x=>x.id===bid);if(b)b.status='cancelled';const c=courses.find(x=>x.id===b.cid);if(c&&c.cur>0){c.cur--;if(c.cur<c.max)c.status='open';}save();renderAll();toast('宸插彇娑?);}
 
 function renderAdmin(){
   if(curTab!=='admin')return;const ct=document.getElementById('view-admin');
-  if(!isAdmin()){ct.innerHTML='<div class="empty"><span class="icon">🔒</span>仅教练/管理员可访问</div>';return;}
+  if(!isAdmin()){ct.innerHTML='<div class="empty"><span class="icon">馃敀</span>浠呮暀缁?绠＄悊鍛樺彲璁块棶</div>';return;}
   const now=new Date(),we=new Date(now.getTime()+7*864e5);
   const todayN=courses.filter(c=>c.date===fmtDate(T)&&c.status!=='cancelled'&&c.status!=='pending_review').length;
   const weekN=courses.filter(c=>{const d=new Date(c.date);return d>=now&&d<=we&&c.status!=='cancelled'&&c.status!=='pending_review'}).length;
   const totalB=bookings.filter(b=>b.status==='booked').length;
   const pendU=users.filter(u=>u.status==='pending').length;
   const pendC=courses.filter(c=>c.status==='pending_review').length;
-  ct.innerHTML=`<div class="stats"><div class="stat"><span class="num">${todayN}</span><span class="label">今日课程</span></div><div class="stat"><span class="num">${weekN}</span><span class="label">本周课程</span></div><div class="stat"><span class="num">${totalB}</span><span class="label">总预约</span></div></div>${isSuperAdmin()?`<div class="card menu-row" onclick="renderUsers()"><div class="icon">👥</div><div class="info"><div class="title">用户管理</div><div class="desc">${pendU>0?`<span style="color:var(--warn)">${pendU}人待审核</span>`:'管理所有账户'}</div></div><div class="arrow">›</div></div>`:''}<div class="section-label">待审核课程</div>${courses.filter(c=>c.status==='pending_review').map(c=>`<div class="card pending-card"><div class="flex mb-8"><span class="text-bold">${fmtDs(c.date)}</span><span class="tag tag-yellow">待审核</span></div><p class="text-sm">⏰ ${c.start}-${c.end} | 限额${c.max} | 🧑‍🏫 ${c.coach||''}</p><div class="act-row"><span class="act-link ok" onclick="approveCourse('${c.id}')">✓ 通过</span><span class="act-link no" onclick="rejectCourse('${c.id}')">✕ 拒绝</span></div></div>`).join('')||'<div class="empty"><span class="icon">📋</span>暂无待审核</div>'}<div class="section-label">已上架课程</div>${courses.filter(c=>c.status==='open'||c.status==='full').map(c=>`<div class="card"><div class="flex mb-8"><span class="text-bold">${fmtDs(c.date)}</span><span class="tag ${c.status==='open'?'tag-red':'tag-yellow'}">${c.status==='open'?'开放':'满员'}</span></div><p class="text-sm">⏰ ${c.start}-${c.end} | 👥 ${c.cur}/${c.max} | 🧑‍🏫 ${c.coach||''}</p><div class="act-row"><span class="act-link ok" onclick="viewBks('${c.id}')">查看预约</span>${isSuperAdmin()||c.by===curUser?.id?`<span class="act-link del" onclick="delCourse('${c.id}')">删除</span>`:`<span class="text-gray">(他人发布)</span>`}</div></div>`).join('')}`;
+  ct.innerHTML=`<div class="stats"><div class="stat"><span class="num">${todayN}</span><span class="label">浠婃棩璇剧▼</span></div><div class="stat"><span class="num">${weekN}</span><span class="label">鏈懆璇剧▼</span></div><div class="stat"><span class="num">${totalB}</span><span class="label">鎬婚绾?/span></div></div>${isSuperAdmin()?`<div class="card menu-row" onclick="renderUsers()"><div class="icon">馃懃</div><div class="info"><div class="title">鐢ㄦ埛绠＄悊</div><div class="desc">${pendU>0?`<span style="color:var(--warn)">${pendU}浜哄緟瀹℃牳</span>`:'绠＄悊鎵€鏈夎处鎴?}</div></div><div class="arrow">鈥?/div></div>`:''}<div class="section-label">寰呭鏍歌绋?/div>${courses.filter(c=>c.status==='pending_review').map(c=>`<div class="card pending-card"><div class="flex mb-8"><span class="text-bold">${fmtDs(c.date)}</span><span class="tag tag-yellow">寰呭鏍?/span></div><p class="text-sm">鈴?${c.start}-${c.end} | 闄愰${c.max} | 馃鈥嶐煆?${c.coach||''}</p><div class="act-row"><span class="act-link ok" onclick="approveCourse('${c.id}')">鉁?閫氳繃</span><span class="act-link no" onclick="rejectCourse('${c.id}')">鉁?鎷掔粷</span></div></div>`).join('')||'<div class="empty"><span class="icon">馃搵</span>鏆傛棤寰呭鏍?/div>'}<div class="section-label">宸蹭笂鏋惰绋?/div>${courses.filter(c=>c.status==='open'||c.status==='full').map(c=>{const canDel=isSuperAdmin()||c.by===curUser?.id;return`<div class="card"><div class="flex mb-8"><span class="text-bold">${fmtDs(c.date)}</span><span class="tag ${c.status==='open'?'tag-red':'tag-yellow'}">${c.status==='open'?'寮€鏀?:'婊″憳'}</span></div><p class="text-sm">鈴?${c.start}-${c.end} | 馃懃 ${c.cur}/${c.max} | 馃鈥嶐煆?${c.coach||''}</p><div class="act-row"><span class="act-link ok" onclick="viewBks('${c.id}')">鏌ョ湅棰勭害</span>${canDel?`<span class="act-link del" onclick="delCourse('${c.id}')">鍒犻櫎</span>`:`<span class="text-gray">锛堜粬浜哄彂甯冿級</span>`}</div></div>`;}).join('')}`;
 }
 function renderUsers(){
   document.getElementById('view-course').classList.add('hidden');document.getElementById('view-booking').classList.add('hidden');document.getElementById('view-admin').classList.remove('hidden');
-  const ct=document.getElementById('view-admin');const pend=users.filter(u=>u.status==='pending');const appr=users.filter(u=>u.status==='approved'&&u.role!=='admin');const rn={parent:'家长',coach:'教练员',admin:'管理员'};
-  ct.innerHTML=`<p class="section-label" style="cursor:pointer" onclick="renderAdmin()">‹ 返回</p><div class="section-label">待审核（${pend.length}）</div>${pend.map(u=>userCard(u,rn)).join('')||'<div class="empty"><span class="icon">📋</span>暂无</div>'}<div class="section-label">已通过</div>${appr.map(u=>userCard(u,rn)).join('')||'<div class="empty"><span class="icon">👥</span>暂无</div>'}`;
+  const ct=document.getElementById('view-admin');const pend=users.filter(u=>u.status==='pending');const appr=users.filter(u=>u.status==='approved'&&u.role!=='admin');const rn={parent:'瀹堕暱',coach:'鏁欑粌鍛?,admin:'绠＄悊鍛?};
+  ct.innerHTML=`<p class="section-label" style="cursor:pointer" onclick="renderAdmin()">鈥?杩斿洖</p><div class="section-label">寰呭鏍革紙${pend.length}锛?/div>${pend.map(u=>userCard(u,rn)).join('')||'<div class="empty"><span class="icon">馃搵</span>鏆傛棤</div>'}<div class="section-label">宸查€氳繃</div>${appr.map(u=>userCard(u,rn)).join('')||'<div class="empty"><span class="icon">馃懃</span>鏆傛棤</div>'}`;
   document.getElementById('filterBar').classList.add('hidden');document.getElementById('fab').classList.add('hidden');
 }
-function userCard(u,rn){return`<div class="card" style="margin-top:0"><div class="flex mb-8"><span class="text-bold">${u.relation||u.name||'未命名'}</span><span class="tag tag-red ml-8">${rn[u.role]}</span><span class="tag ml-8 ${u.status==='pending'?'tag-yellow':u.status==='approved'?'tag-green':'tag-gray'}">${u.status==='pending'?'待审核':u.status==='approved'?'已通过':'已拒绝'}</span></div><div class="info-row"><span class="lbl">手机号</span><span class="val tel">${u.phone||'--'}</span></div>${u.role==='parent'?`<div class="info-row"><span class="lbl">称呼</span><span class="val">${u.relation||'--'}</span></div><div class="info-row"><span class="lbl">孩子</span><span class="val">${u.childName||'--'} ${u.childGrade||''}</span></div>`:''}<div class="act-row"><span class="act-link ok" onclick="openEditUser('${u.id}')">✎ 编辑</span>${u.status==='pending'?`<span class="act-link ok" onclick="approveUser('${u.id}')">✓ 通过</span><span class="act-link no" onclick="rejectUser('${u.id}')">✕ 拒绝</span>`:u.status==='approved'?`<span class="act-link del" onclick="rejectUser('${u.id}')">禁用</span><span class="act-link del" onclick="delUser('${u.id}')">删除</span>`:`<span class="act-link ok" onclick="approveUser('${u.id}')">重新通过</span><span class="act-link del" onclick="delUser('${u.id}')">删除</span>`}</div></div>`;}
-function approveUser(id){const u=users.find(x=>x.id===id);if(u){u.status='approved';save();toast('已通过');}renderUsers();}
-function rejectUser(id){const u=users.find(x=>x.id===id);if(u){u.status='rejected';save();toast('已拒绝');}renderUsers();}
-function delUser(id){if(!confirm('确定删除？'))return;users=users.filter(u=>u.id!==id);save();toast('已删除');renderUsers();}
-function approveCourse(id){const c=courses.find(x=>x.id===id);if(c){c.status='open';save();toast('课程已上架');}renderAll();}
-function rejectCourse(id){const c=courses.find(x=>x.id===id);if(c){c.status='cancelled';save();toast('课程已拒绝');}renderAll();}
-function delCourse(id){if(!confirm('确定删除？'))return;const c=courses.find(x=>x.id===id);if(c)c.status='cancelled';save();renderAll();toast('已删除');}
-function viewBks(cid){curTab='booking';const ct=document.getElementById('view-booking');const bks=bookings.filter(b=>b.cid===cid);const c=courses.find(x=>x.id===cid);ct.innerHTML=`${c?`<div class="card"><p class="text-bold">${fmtDs(c.date)}</p><p class="text-sm mt-4">⏰ ${c.start}-${c.end} | 👥 ${c.cur}/${c.max}</p></div>`:''}${bks.map(b=>`<div class="card"><div class="flex mb-8"><span class="tag ${b.status==='booked'?'tag-green':''}">${b.status==='booked'?'已预约':'已取消'}</span></div><div class="info-row"><span class="lbl">学员</span><span class="val">${b.child}</span></div>${b.grade?`<div class="info-row"><span class="lbl">年级</span><span class="val">${b.grade}</span></div>`:''}<div class="info-row"><span class="lbl">家长</span><span class="val">${b.parent}</span></div><div class="info-row"><span class="lbl">电话</span><span class="val tel">${b.phone}</span></div></div>`).join('')}`;document.getElementById('filterBar').classList.add('hidden');document.getElementById('view-course').classList.add('hidden');document.getElementById('view-admin').classList.add('hidden');ct.classList.remove('hidden');document.getElementById('fab').classList.add('hidden');document.getElementById('tabBar').querySelectorAll('.tab').forEach(e=>e.classList.toggle('on',e.dataset.t==='booking'));}
+function userCard(u,rn){return`<div class="card" style="margin-top:0"><div class="flex mb-8"><span class="text-bold">${u.relation||u.name||'鏈懡鍚?}</span><span class="tag tag-red ml-8">${rn[u.role]}</span><span class="tag ml-8 ${u.status==='pending'?'tag-yellow':u.status==='approved'?'tag-green':'tag-gray'}">${u.status==='pending'?'寰呭鏍?:u.status==='approved'?'宸查€氳繃':'宸叉嫆缁?}</span></div><div class="info-row"><span class="lbl">鎵嬫満鍙?/span><span class="val tel">${u.phone||'--'}</span></div>${u.role==='parent'?`<div class="info-row"><span class="lbl">绉板懠</span><span class="val">${u.relation||'--'}</span></div><div class="info-row"><span class="lbl">瀛╁瓙</span><span class="val">${u.childName||'--'} ${u.childGrade||''}</span></div>`:''}<div class="act-row"><span class="act-link ok" onclick="openEditUser('${u.id}')">鉁?缂栬緫</span>${u.status==='pending'?`<span class="act-link ok" onclick="approveUser('${u.id}')">鉁?閫氳繃</span><span class="act-link no" onclick="rejectUser('${u.id}')">鉁?鎷掔粷</span>`:u.status==='approved'?`<span class="act-link del" onclick="rejectUser('${u.id}')">绂佺敤</span><span class="act-link del" onclick="delUser('${u.id}')">鍒犻櫎</span>`:`<span class="act-link ok" onclick="approveUser('${u.id}')">閲嶆柊閫氳繃</span><span class="act-link del" onclick="delUser('${u.id}')">鍒犻櫎</span>`}</div></div>`;}
+function approveUser(id){const u=users.find(x=>x.id===id);if(u){u.status='approved';save();toast('宸查€氳繃');}renderUsers();}
+function rejectUser(id){const u=users.find(x=>x.id===id);if(u){u.status='rejected';save();toast('宸叉嫆缁?);}renderUsers();}
+function delUser(id){if(!confirm('纭畾鍒犻櫎锛?))return;users=users.filter(u=>u.id!==id);save();toast('宸插垹闄?);renderUsers();}
+function approveCourse(id){const c=courses.find(x=>x.id===id);if(c){c.status='open';save();toast('璇剧▼宸蹭笂鏋?);}renderAll();}
+function rejectCourse(id){const c=courses.find(x=>x.id===id);if(c){c.status='cancelled';save();toast('璇剧▼宸叉嫆缁?);}renderAll();}
+function delCourse(id){if(!confirm('纭畾鍒犻櫎锛?))return;const c=courses.find(x=>x.id===id);if(c)c.status='cancelled';save();renderAll();toast('宸插垹闄?);}
+function viewBks(cid){curTab='booking';const ct=document.getElementById('view-booking');const bks=bookings.filter(b=>b.cid===cid);const c=courses.find(x=>x.id===cid);ct.innerHTML=`${c?`<div class="card"><p class="text-bold">${fmtDs(c.date)}</p><p class="text-sm mt-4">鈴?${c.start}-${c.end} | 馃懃 ${c.cur}/${c.max}</p></div>`:''}${bks.map(b=>`<div class="card"><div class="flex mb-8"><span class="tag ${b.status==='booked'?'tag-green':''}">${b.status==='booked'?'宸查绾?:'宸插彇娑?}</span></div><div class="info-row"><span class="lbl">瀛﹀憳</span><span class="val">${b.child}</span></div>${b.grade?`<div class="info-row"><span class="lbl">骞寸骇</span><span class="val">${b.grade}</span></div>`:''}<div class="info-row"><span class="lbl">瀹堕暱</span><span class="val">${b.parent}</span></div><div class="info-row"><span class="lbl">鐢佃瘽</span><span class="val tel">${b.phone}</span></div></div>`).join('')}`;document.getElementById('filterBar').classList.add('hidden');document.getElementById('view-course').classList.add('hidden');document.getElementById('view-admin').classList.add('hidden');ct.classList.remove('hidden');document.getElementById('fab').classList.add('hidden');document.getElementById('tabBar').querySelectorAll('.tab').forEach(e=>e.classList.toggle('on',e.dataset.t==='booking'));}
 function openAddCourse(){const tmr=new Date(T);tmr.setDate(tmr.getDate()+1);document.getElementById('acDate').value=fmtDate(tmr);document.getElementById('addModal').classList.remove('hidden');}
 function closeAdd(){document.getElementById('addModal').classList.add('hidden');}
-function addCourse(){const d=document.getElementById('acDate').value,s=document.getElementById('acStart').value,e=document.getElementById('acEnd').value;if(!d){toast('请选择日期');return}if(s>=e){toast('结束时间必须晚于开始时间');return}const status=isSuperAdmin()?'open':'pending_review';courses.push({id:'c'+Date.now(),date:d,start:s,end:e,max:parseInt(document.getElementById('acMax').value)||20,cur:0,coach:document.getElementById('acCoach').value||curUser?.name||'',status,note:document.getElementById('acNote').value,by:curUser?.id});save();closeAdd();toast(isSuperAdmin()?'课程添加成功':'课程已提交，等待管理员审核');renderAll();}
+function addCourse(){const d=document.getElementById('acDate').value,s=document.getElementById('acStart').value,e=document.getElementById('acEnd').value;if(!d){toast('璇烽€夋嫨鏃ユ湡');return}if(s>=e){toast('缁撴潫鏃堕棿蹇呴』鏅氫簬寮€濮嬫椂闂?);return}const status=isSuperAdmin()?'open':'pending_review';courses.push({id:'c'+Date.now(),date:d,start:s,end:e,max:parseInt(document.getElementById('acMax').value)||20,cur:0,coach:document.getElementById('acCoach').value||curUser?.name||'',status,note:document.getElementById('acNote').value,by:curUser?.id});save();closeAdd();toast(isSuperAdmin()?'璇剧▼娣诲姞鎴愬姛':'璇剧▼宸叉彁浜わ紝绛夊緟绠＄悊鍛樺鏍?);renderAll();}
 
-function openEditUser(uid){const u=users.find(x=>x.id===uid);if(!u)return;document.getElementById('editUserId').value=uid;document.getElementById('editName').value=u.name||'';document.getElementById('editPhone').value=u.phone||'';document.getElementById('editParentFields').classList.toggle('hidden',u.role!=='parent');if(u.role==='parent'){document.getElementById('editChild').value=u.childName||'';document.getElementById('editGrade').value=u.childGrade||'';document.getElementById('editRelation').value=u.relation||'孩子爸爸';}document.getElementById('editUserModal').classList.remove('hidden');}
+function openEditUser(uid){const u=users.find(x=>x.id===uid);if(!u)return;document.getElementById('editUserId').value=uid;document.getElementById('editName').value=u.name||'';document.getElementById('editPhone').value=u.phone||'';document.getElementById('editParentFields').classList.toggle('hidden',u.role!=='parent');if(u.role==='parent'){document.getElementById('editChild').value=u.childName||'';document.getElementById('editGrade').value=u.childGrade||'';document.getElementById('editRelation').value=u.relation||'瀛╁瓙鐖哥埜';}document.getElementById('editUserModal').classList.remove('hidden');}
 function closeEditUser(){document.getElementById('editUserModal').classList.add('hidden');}
-function saveEditUser(){const uid=document.getElementById('editUserId').value;const u=users.find(x=>x.id===uid);if(!u)return;u.name=document.getElementById('editName').value;u.phone=document.getElementById('editPhone').value;if(u.role==='parent'){u.childName=document.getElementById('editChild').value;u.childGrade=document.getElementById('editGrade').value;u.relation=document.getElementById('editRelation').value;}save();closeEditUser();toast('已保存');renderUsers();}
+function saveEditUser(){const uid=document.getElementById('editUserId').value;const u=users.find(x=>x.id===uid);if(!u)return;u.name=document.getElementById('editName').value;u.phone=document.getElementById('editPhone').value;if(u.role==='parent'){u.childName=document.getElementById('editChild').value;u.childGrade=document.getElementById('editGrade').value;u.relation=document.getElementById('editRelation').value;}save();closeEditUser();toast('宸蹭繚瀛?);renderUsers();}
 
 if(curUser){document.getElementById('loginView').classList.add('hidden');document.getElementById('mainView').classList.remove('hidden');document.getElementById('pendingBar').classList.toggle('hidden',curUser.status==='approved'||curUser.role==='parent');updateUI();renderAll();}
 </script>
