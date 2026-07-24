@@ -13,9 +13,7 @@ body{font-family:'PingFang SC','Helvetica Neue',sans-serif;font-size:15px;color:
 
 .btn{display:block;width:100%;padding:14px;border:none;border-radius:12px;font-size:16px;text-align:center;cursor:pointer;font-weight:500}
 .btn:active{opacity:.85}
-.btn-red{background:var(--red);color:#fff}
-.btn-yellow{background:var(--warn);color:#fff}
-.btn-dark{background:#333;color:#fff}
+.btn-red{background:var(--red);color:#fff}.btn-yellow{background:var(--warn);color:#fff}.btn-dark{background:#333;color:#fff}
 .btn-outline{background:#fff;color:var(--red);border:2px solid var(--red)}
 .btn-sm{padding:6px 14px;font-size:13px;border-radius:8px;width:auto;display:inline-block}
 
@@ -30,7 +28,6 @@ body{font-family:'PingFang SC','Helvetica Neue',sans-serif;font-size:15px;color:
 
 .header{background:linear-gradient(135deg,#E84020,#C0392B);padding:18px 16px;color:#fff;position:sticky;top:0;z-index:50}
 .header h1{font-size:20px}.header .sub{font-size:12px;opacity:.85;margin-top:2px}
-.user-tag{background:rgba(255,255,255,.2);color:#fff;padding:6px 14px;border-radius:20px;font-size:12px;cursor:pointer;border:1px solid rgba(255,255,255,.3)}
 
 .tabs{display:flex;background:#fff;position:sticky;top:0;z-index:40;border-bottom:1px solid #eee}
 .tabs .tab{flex:1;text-align:center;padding:14px 0;font-size:14px;color:#666;border-bottom:3px solid transparent;cursor:pointer}
@@ -42,32 +39,23 @@ body{font-family:'PingFang SC','Helvetica Neue',sans-serif;font-size:15px;color:
 
 .pending-bar{background:#FFF8E8;padding:10px 16px;text-align:center;color:var(--warn);font-size:13px;font-weight:500}
 
-.course-item{cursor:pointer}
-.course-item:active{opacity:.95}
-.course-item .head{margin-bottom:10px}
-.course-item .body{padding:10px 0;border-top:1px solid #f5f5f5;border-bottom:1px solid #f5f5f5;margin-bottom:10px}
+.course-item{cursor:pointer}.course-item:active{opacity:.95}
+.course-item .head{margin-bottom:10px}.course-item .body{padding:10px 0;border-top:1px solid #f5f5f5;border-bottom:1px solid #f5f5f5;margin-bottom:10px}
 .course-item .body p{padding:3px 0;font-size:16px}
 .course-item .foot{display:flex;justify-content:space-between;align-items:center}
-.remain{background:#E8F8EE;color:var(--green);padding:3px 10px;border-radius:6px;font-size:12px}
-.red-num{color:var(--red);font-weight:600}
-.dim{opacity:.55;pointer-events:none}
+.remain{background:#E8F8EE;color:var(--green);padding:3px 10px;border-radius:6px;font-size:12px}.red-num{color:var(--red);font-weight:600}.dim{opacity:.55;pointer-events:none}
 
 .stats{display:flex;padding:14px 12px;gap:8px}
 .stat{flex:1;background:#fff;border-radius:16px;padding:22px 8px;text-align:center;box-shadow:0 1px 6px rgba(0,0,0,.03)}
 .stat .num{font-size:30px;font-weight:700;color:var(--red)}.stat .num.warn{color:var(--warn)}
 .stat .label{font-size:11px;color:var(--gray);margin-top:4px;display:block}
 
-.menu-row{padding:18px;cursor:pointer;display:flex;align-items:center}
-.menu-row:active{opacity:.9}
-.menu-row .icon{font-size:26px;margin-right:14px;flex-shrink:0}
-.menu-row .info{flex:1}.menu-row .title{font-size:16px;font-weight:500}.menu-row .desc{font-size:12px;color:var(--gray);margin-top:2px}
-.menu-row .arrow{color:var(--gray)}
+.menu-row{padding:18px;cursor:pointer;display:flex;align-items:center}.menu-row:active{opacity:.9}
+.menu-row .icon{font-size:26px;margin-right:14px;flex-shrink:0}.menu-row .info{flex:1}.menu-row .title{font-size:16px;font-weight:500}.menu-row .desc{font-size:12px;color:var(--gray);margin-top:2px}.menu-row .arrow{color:var(--gray)}
 
 .info-row{display:flex;padding:8px 0;border-bottom:1px solid #fafafa}.info-row .lbl{width:75px;flex-shrink:0;color:var(--gray);font-size:13px}.info-row .val{flex:1;font-size:14px}.info-row .val.tel{color:var(--red)}
-
 .act-link{font-size:13px;cursor:pointer}.act-link.ok{color:var(--green)}.act-link.no{color:var(--warn)}.act-link.del{color:var(--red)}
-.act-divide{border-top:1px solid #f0f0f0;margin-top:10px;padding-top:10px}
-.act-row{display:flex;justify-content:flex-end;gap:20px;margin-top:10px}
+.act-divide{border-top:1px solid #f0f0f0;margin-top:10px;padding-top:10px}.act-row{display:flex;justify-content:flex-end;gap:20px;margin-top:10px}
 
 .fab{position:fixed;bottom:30px;right:20px;width:50px;height:50px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:28px;cursor:pointer;box-shadow:0 4px 16px rgba(232,64,32,.4);z-index:100;line-height:1}
 
@@ -78,28 +66,17 @@ body{font-family:'PingFang SC','Helvetica Neue',sans-serif;font-size:15px;color:
 .f-row label{width:70px;flex-shrink:0;font-size:14px;color:#333}
 .f-row input,.f-row select{flex:1;font-size:15px;border:none;outline:none;padding:6px 0;-webkit-appearance:none;background:transparent}
 .f-btns{display:flex;padding:16px 20px 0;gap:12px}.f-btns .btn{flex:1}
-
 .toast{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,.8);color:#fff;padding:10px 22px;border-radius:8px;font-size:14px;z-index:999;opacity:0;pointer-events:none;transition:opacity .25s}.toast.on{opacity:1}
-
 .page{padding-bottom:20px}
-
-/* Login */
 .login-top{min-height:35vh;background:linear-gradient(180deg,#E84020,#F5F5F5 70%);padding-top:60px;text-align:center}
 .login-top .ball{width:68px;height:68px;border-radius:50%;background:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:34px;box-shadow:0 4px 16px rgba(0,0,0,.12)}
 .login-top h2{color:#fff;margin-top:14px;text-shadow:0 1px 4px rgba(0,0,0,.15);font-size:22px}
 .login-top .sub{color:rgba(255,255,255,.85);font-size:13px;margin-top:4px}
 .login-box{max-width:380px;width:90%;margin:-34px auto 0;position:relative;z-index:1}
 .login-box input{font-size:16px;padding:8px 0;width:100%;border:none;outline:none}
-
 .section-label{padding:16px 16px 6px;font-size:13px;color:var(--gray);font-weight:500}
-
-/* Pending card border */
 .pending-card{border-left:4px solid var(--warn)}
-
-@media (max-width:380px){
-  .btn{font-size:15px;padding:12px}
-  .card{padding:14px;margin:10px 12px}
-}
+@media (max-width:380px){.btn{font-size:15px;padding:12px}.card{padding:14px;margin:10px 12px}}
 </style>
 </head>
 <body>
@@ -112,12 +89,21 @@ body{font-family:'PingFang SC','Helvetica Neue',sans-serif;font-size:15px;color:
     <h2>兖州勇士篮球</h2>
     <p class="sub">勇士精神，从这里开始</p>
   </div>
+  <!-- Step 1: Role buttons -->
   <div id="loginStep1" class="login-box card">
     <p style="text-align:center;font-weight:600;margin-bottom:14px;font-size:16px">选择身份登录</p>
     <button class="btn btn-red" onclick="goPhone('parent','家长')">👨‍👩‍👧 家长登录</button>
     <button class="btn btn-yellow mt-12" onclick="goPhone('coach','教练员')">🧑‍🏫 教练员登录</button>
-    <button class="btn btn-dark mt-12" onclick="adminLogin()">⚙️ 管理员登录</button>
+    <button class="btn btn-dark mt-12" onclick="showAdminVerify()">⚙️ 管理员登录</button>
   </div>
+  <!-- Step 2a: Admin phone verify -->
+  <div id="loginAdmin" class="login-box card hidden">
+    <p style="text-align:center;font-weight:600;margin-bottom:14px;font-size:16px">管理员验证</p>
+    <div style="display:flex;align-items:center;padding:8px 0;border-bottom:2px solid #eee;margin-bottom:16px"><span style="color:#999;margin-right:10px">📱</span><input type="tel" id="adminPhoneInput" maxlength="11" placeholder="请输入管理员手机号" onkeydown="if(event.key==='Enter')verifyAdmin()"></div>
+    <button class="btn btn-dark" onclick="verifyAdmin()">验证登录</button>
+    <p class="text-gray mt-12" style="text-align:center;cursor:pointer" onclick="backStep1()">‹ 返回选择身份</p>
+  </div>
+  <!-- Step 2b: Phone input -->
   <div id="loginStep2" class="login-box card hidden">
     <p style="text-align:center;font-weight:600;margin-bottom:14px;font-size:16px"><span id="phoneRoleLabel"></span>登录</p>
     <div style="display:flex;align-items:center;padding:8px 0;border-bottom:2px solid #eee;margin-bottom:16px"><span style="color:#999;margin-right:10px">📱</span><input type="tel" id="phoneInput" maxlength="11" placeholder="请输入手机号" onkeydown="if(event.key==='Enter')checkPhone()"></div>
@@ -125,11 +111,16 @@ body{font-family:'PingFang SC','Helvetica Neue',sans-serif;font-size:15px;color:
     <p class="text-gray mt-12" style="text-align:center">新用户自动注册，老用户直接登录</p>
     <p class="text-gray mt-8" style="text-align:center;cursor:pointer" onclick="backStep1()">‹ 返回选择身份</p>
   </div>
+  <!-- Step 3: Register -->
   <div id="loginStep3" class="login-box card hidden">
     <p style="text-align:center;font-weight:600;margin-bottom:12px;font-size:16px">首次使用 · <span id="regRoleLabel"></span>注册</p>
     <div class="f-row" style="padding:8px 0"><label>手机号</label><span style="color:var(--gray)" id="regPhoneShow"></span></div>
-    <div class="f-row" style="padding:8px 0"><label>姓名</label><input id="regName" placeholder="请输入姓名"></div>
-    <div id="regChildArea" class="hidden">
+    <div id="regCoachArea" class="hidden">
+      <div class="f-row" style="padding:8px 0"><label>教练姓名</label><input id="regName" placeholder="请输入教练姓名"></div>
+    </div>
+    <div id="regParentArea" class="hidden">
+      <div class="f-row" style="padding:8px 0"><label>与孩子关系</label>
+        <select id="regRelation"><option>孩子爸爸</option><option>孩子妈妈</option><option>孩子爷爷</option><option>孩子奶奶</option><option>孩子姥爷</option><option>孩子姥姥</option></select></div>
       <div class="f-row" style="padding:8px 0"><label>孩子姓名</label><input id="regChild" placeholder="请输入孩子姓名"></div>
       <div class="f-row" style="padding:8px 0"><label>所在年级</label>
         <select id="regGrade"><option>幼儿园</option><option>一年级</option><option selected>二年级</option><option>三年级</option><option>四年级</option><option>五年级</option><option>六年级</option><option>初一</option><option>初二</option><option>初三</option></select></div>
@@ -138,6 +129,7 @@ body{font-family:'PingFang SC','Helvetica Neue',sans-serif;font-size:15px;color:
     <button class="btn btn-red mt-8" onclick="doRegister()">提交注册</button>
     <p class="text-gray mt-12" style="text-align:center;cursor:pointer" onclick="backStep2()">‹ 返回修改手机号</p>
   </div>
+  <!-- Step 4: Pending -->
   <div id="loginStep4" class="login-box card hidden" style="text-align:center">
     <span style="font-size:56px;display:block;margin:16px 0 10px">⏳</span>
     <p style="font-weight:600;font-size:17px">审核中</p>
@@ -148,10 +140,7 @@ body{font-family:'PingFang SC','Helvetica Neue',sans-serif;font-size:15px;color:
 
 <!-- ====== MAIN APP ====== -->
 <div id="mainView" class="hidden">
-  <div class="header flex">
-    <div><h1>🏀 兖州勇士篮球</h1><p class="sub">预约训练课程，开启勇士之旅</p></div>
-    <span class="user-tag" id="roleBadge" onclick="switchRole()"></span>
-  </div>
+  <div class="header"><div><h1>🏀 兖州勇士篮球</h1><p class="sub">预约训练课程，开启勇士之旅</p></div></div>
   <div class="pending-bar hidden" id="pendingBar">⏳ 您的账号正在审核中，请等待管理员审核通过</div>
 
   <div class="tabs" id="tabBar">
@@ -172,7 +161,7 @@ body{font-family:'PingFang SC','Helvetica Neue',sans-serif;font-size:15px;color:
   <div class="fab hidden" id="fab" onclick="openAddCourse()">+</div>
 </div>
 
-<!-- ====== BOOKING FORM (overlay) ====== -->
+<!-- ====== BOOKING FORM ====== -->
 <div id="bookingOverlay" class="hidden" style="position:fixed;top:0;left:0;right:0;bottom:0;background:#F5F5F5;z-index:150;overflow-y:auto">
   <div class="header flex"><span onclick="closeBooking()" style="cursor:pointer;font-size:22px">‹ 返回</span><span style="font-weight:600">确认预约</span><span></span></div>
   <div id="bookingInner"></div>
@@ -194,6 +183,7 @@ body{font-family:'PingFang SC','Helvetica Neue',sans-serif;font-size:15px;color:
 
 <script>
 // ====== DATA ======
+const ADMIN_PHONE = '15263466327';
 const T = new Date();
 const fmtDate = d => d.toISOString().split('T')[0];
 const tmrw = n => { const d = new Date(T); d.setDate(d.getDate()+n); return fmtDate(d); };
@@ -223,7 +213,7 @@ function initDemo() {
     ];
   }
   if (users.length === 0) {
-    users = [{ id:'u_admin', openid:'admin', name:'管理员', phone:'13800000000', role:'admin', status:'approved' }];
+    users = [{ id:'u_admin', openid:'admin', name:'管理员', phone:ADMIN_PHONE, role:'admin', status:'approved' }];
   }
   save();
 }
@@ -234,9 +224,24 @@ function toast(m) { const t=document.getElementById('toast'); t.textContent=m; t
 function fmtDs(s) { if(!s)return''; const d=new Date(s); const w=['周日','周一','周二','周三','周四','周五','周六']; return `${d.getMonth()+1}月${d.getDate()}日 ${w[d.getDay()]}`; }
 function isAdmin() { return curUser && (curUser.role==='admin'||curUser.role==='coach'); }
 function isSuperAdmin() { return curUser && curUser.role==='admin'; }
-function isApproved() { return curUser && curUser.status==='approved'; }
 
 // ====== LOGIN ======
+function showAdminVerify() {
+  document.getElementById('loginStep1').classList.add('hidden');
+  document.getElementById('loginAdmin').classList.remove('hidden');
+  setTimeout(()=>document.getElementById('adminPhoneInput').focus(), 200);
+}
+
+function verifyAdmin() {
+  const phone = document.getElementById('adminPhoneInput').value.replace(/\s/g,'');
+  if (phone !== ADMIN_PHONE) { toast('手机号不正确，无权登录'); return; }
+  localStorage.setItem('bb_adminVerified', '1');
+  let u = users.find(u=>u.role==='admin');
+  if (!u) { u = { id:'u_admin', openid:'admin', name:'管理员', phone:ADMIN_PHONE, role:'admin', status:'approved' }; users.push(u); }
+  curUser = u; save();
+  enterApp();
+}
+
 function goPhone(role, name) {
   tmpRole=role; tmpRoleName=name;
   document.getElementById('phoneRoleLabel').textContent=name;
@@ -246,6 +251,7 @@ function goPhone(role, name) {
 }
 
 function backStep1() {
+  document.getElementById('loginAdmin').classList.add('hidden');
   document.getElementById('loginStep2').classList.add('hidden');
   document.getElementById('loginStep3').classList.add('hidden');
   document.getElementById('loginStep4').classList.add('hidden');
@@ -264,34 +270,45 @@ function checkPhone() {
   tmpPhone = phone;
   const exist = users.find(u => u.phone===phone && u.role===tmpRole);
   if (exist) {
-    if (exist.status==='approved') { doLogin(exist); }
+    if (exist.status==='approved') { curUser=exist; save(); enterApp(); }
     else if (exist.status==='pending') {
       document.getElementById('pendingPhone').textContent=phone;
       document.getElementById('loginStep2').classList.add('hidden');
       document.getElementById('loginStep4').classList.remove('hidden');
-    } else { toast('账号已被禁用，请联系管理员'); }
+    } else { toast('账号已被禁用'); }
   } else {
     document.getElementById('regPhoneShow').textContent=phone;
     document.getElementById('regRoleLabel').textContent=tmpRoleName;
-    document.getElementById('regChildArea').classList.toggle('hidden', tmpRole!=='parent');
+    document.getElementById('regCoachArea').classList.toggle('hidden', tmpRole!=='coach');
+    document.getElementById('regParentArea').classList.toggle('hidden', tmpRole!=='parent');
     document.getElementById('loginStep2').classList.add('hidden');
     document.getElementById('loginStep3').classList.remove('hidden');
   }
 }
 
 function doRegister() {
-  const name = document.getElementById('regName').value.trim();
-  if (!name) { toast('请填写姓名'); return; }
-  if (tmpRole==='parent' && !document.getElementById('regChild').value.trim()) { toast('请填写孩子姓名'); return; }
+  if (tmpRole==='coach') {
+    const name = document.getElementById('regName').value.trim();
+    if (!name) { toast('请填写教练姓名'); return; }
+  }
+  if (tmpRole==='parent') {
+    if (!document.getElementById('regChild').value.trim()) { toast('请填写孩子姓名'); return; }
+  }
+
+  // Check admin verified
+  const adminVerified = tmpRole==='parent' || tmpRole==='coach' ? true : false;
+
   const user = {
-    id:'u'+Date.now(), openid:tmpRole+Date.now(), name, phone:tmpPhone, role:tmpRole, status:'pending',
+    id:'u'+Date.now(), openid:tmpRole+Date.now(),
+    name: tmpRole==='parent' ? document.getElementById('regRelation').value : document.getElementById('regName').value.trim(),
+    phone:tmpPhone, role:tmpRole, status:'pending',
     childName: document.getElementById('regChild')?.value||'',
     childGrade: document.getElementById('regGrade')?.value||'',
+    relation: document.getElementById('regRelation')?.value||'',
     createdAt: new Date().toISOString()
   };
   users.push(user);
-  curUser = user;
-  save();
+  curUser = user; save();
   document.getElementById('loginView').classList.add('hidden');
   document.getElementById('mainView').classList.remove('hidden');
   document.getElementById('pendingBar').classList.remove('hidden');
@@ -299,42 +316,15 @@ function doRegister() {
   toast('注册成功，等待管理员审核');
 }
 
-function adminLogin() {
-  let u = users.find(u=>u.role==='admin');
-  if (!u) { u = { id:'u_admin', openid:'admin', name:'管理员', phone:'13800000000', role:'admin', status:'approved' }; users.push(u); }
-  curUser = u; save();
+function enterApp() {
   document.getElementById('loginView').classList.add('hidden');
   document.getElementById('mainView').classList.remove('hidden');
   document.getElementById('pendingBar').classList.add('hidden');
   updateUI(); renderAll();
-  toast('管理员登录成功');
-}
-
-function doLogin(user) {
-  curUser = user; save();
-  document.getElementById('loginView').classList.add('hidden');
-  document.getElementById('mainView').classList.remove('hidden');
-  document.getElementById('pendingBar').classList.add('hidden');
-  updateUI(); renderAll();
-}
-
-function switchRole() {
-  const roles = ['parent','coach','admin'];
-  const names = {parent:'👨‍👩‍👧 家长',coach:'🧑‍🏫 教练员',admin:'⚙️ 管理员'};
-  const idx = roles.indexOf(curUser?.role);
-  const nr = roles[(idx+1)%3];
-  let u = users.find(u=>u.role===nr);
-  if (!u) { u = { id:'u_'+Date.now(), openid:nr+Date.now(), name:names[nr], phone:'', role:nr, status:nr==='admin'?'approved':'pending' }; users.push(u); }
-  curUser = u; save();
-  document.getElementById('pendingBar').classList.toggle('hidden', u.status==='approved');
-  updateUI(); renderAll();
-  toast('切换为: '+names[nr]);
 }
 
 function updateUI() {
   if (!curUser) return;
-  const names = {parent:'👨‍👩‍👧 家长',coach:'🧑‍🏫 教练员',admin:'⚙️ 管理员'};
-  document.getElementById('roleBadge').textContent = names[curUser.role];
   document.getElementById('tabBar').querySelectorAll('.tab')[2].style.display = isAdmin() ? '' : 'none';
 }
 
@@ -370,13 +360,11 @@ function renderCourses() {
   if (curFilter==='today') list = list.filter(c => new Date(c.date).toDateString()===ts);
   if (curFilter==='week') list = list.filter(c => { const d=new Date(c.date); return d>=now && d<=we; });
   if (!list.length) { ct.innerHTML='<div class="empty"><span class="icon">📋</span>暂无课程</div>'; return; }
-
   ct.innerHTML = list.map(c => {
     const full = c.cur>=c.max;
-    const admin = isAdmin();
     return `<div class="card course-item ${full?'dim':''}" onclick="${full?'':`openBk('${c.id}')`}">
-      <div class="head flex"><span class="tag ${c.status==='open'?'tag-red':'tag-yellow'}">${c.status==='open'?'可预约':'已满员'}</span>${admin?`<span class="text-gray">${c.coach||''}</span>`:''}</div>
-      <div class="body"><p>📅 ${fmtDs(c.date)}</p><p>⏰ ${c.start} - ${c.end}</p>${admin?`<p class="text-sm">🧑‍🏫 ${c.coach||''} ${c.note?'| '+c.note:''}</p>`:''}</div>
+      <div class="head flex"><span class="tag ${c.status==='open'?'tag-red':'tag-yellow'}">${c.status==='open'?'可预约':'已满员'}</span>${isAdmin()?`<span class="text-gray">${c.coach||''}</span>`:''}</div>
+      <div class="body"><p>📅 ${fmtDs(c.date)}</p><p>⏰ ${c.start} - ${c.end}</p>${isAdmin()?`<p class="text-sm">🧑‍🏫 ${c.coach||''} ${c.note?'| '+c.note:''}</p>`:''}</div>
       <div class="foot"><span>👥 已预约 <span class="red-num">${c.cur}</span>/${c.max} 人</span>${c.status==='open'?`<span class="remain">剩${c.max-c.cur}个名额</span>`:''}</div></div>`;
   }).join('');
 }
@@ -435,14 +423,12 @@ function renderAdmin() {
   if (curTab!=='admin') return;
   const ct = document.getElementById('view-admin');
   if (!isAdmin()) { ct.innerHTML='<div class="empty"><span class="icon">🔒</span>仅教练/管理员可访问</div>'; return; }
-
   const now=new Date(); const we=new Date(now.getTime()+7*864e5);
   const todayN=courses.filter(c=>c.date===fmtDate(T)&&c.status!=='cancelled'&&c.status!=='pending_review').length;
   const weekN=courses.filter(c=>{const d=new Date(c.date);return d>=now&&d<=we&&c.status!=='cancelled'&&c.status!=='pending_review'}).length;
   const totalB=bookings.filter(b=>b.status==='booked').length;
   const pendU=users.filter(u=>u.status==='pending').length;
   const pendC=courses.filter(c=>c.status==='pending_review').length;
-
   ct.innerHTML=`<div class="stats"><div class="stat"><span class="num">${todayN}</span><span class="label">今日课程</span></div><div class="stat"><span class="num">${weekN}</span><span class="label">本周课程</span></div><div class="stat"><span class="num">${totalB}</span><span class="label">总预约</span></div></div>
   ${isSuperAdmin()?`<div class="card menu-row" onclick="renderUsers()"><div class="icon">👥</div><div class="info"><div class="title">用户管理</div><div class="desc">${pendU>0?`<span style="color:var(--warn)">${pendU}人待审核</span>`:'管理所有账户'}</div></div><div class="arrow">›</div></div>`:''}
   <div class="section-label">待审核课程</div>
@@ -469,16 +455,15 @@ function renderUsers() {
 }
 
 function userCard(u, rn) {
-  return `<div class="card" style="margin-top:0"><div class="flex mb-8"><span class="text-bold">${u.name||'未命名'}</span><span class="tag tag-red ml-8">${rn[u.role]}</span><span class="tag ml-8 ${u.status==='pending'?'tag-yellow':u.status==='approved'?'tag-green':'tag-gray'}">${u.status==='pending'?'待审核':u.status==='approved'?'已通过':'已拒绝'}</span></div>
+  return `<div class="card" style="margin-top:0"><div class="flex mb-8"><span class="text-bold">${u.relation||u.name||'未命名'}</span><span class="tag tag-red ml-8">${rn[u.role]}</span><span class="tag ml-8 ${u.status==='pending'?'tag-yellow':u.status==='approved'?'tag-green':'tag-gray'}">${u.status==='pending'?'待审核':u.status==='approved'?'已通过':'已拒绝'}</span></div>
   <div class="info-row"><span class="lbl">手机号</span><span class="val tel">${u.phone||'--'}</span></div>
-  ${u.role==='parent'?`<div class="info-row"><span class="lbl">孩子</span><span class="val">${u.childName||'--'} ${u.childGrade||''}</span></div>`:''}
+  ${u.role==='parent'?`<div class="info-row"><span class="lbl">称呼</span><span class="val">${u.relation||'--'}</span></div><div class="info-row"><span class="lbl">孩子</span><span class="val">${u.childName||'--'} ${u.childGrade||''}</span></div>`:''}
   <div class="act-row">${u.status==='pending'?`<span class="act-link ok" onclick="approveUser('${u.id}')">✓ 通过</span><span class="act-link no" onclick="rejectUser('${u.id}')">✕ 拒绝</span>`:u.status==='approved'?`<span class="act-link del" onclick="rejectUser('${u.id}')">禁用</span><span class="act-link del" onclick="delUser('${u.id}')">删除</span>`:`<span class="act-link ok" onclick="approveUser('${u.id}')">重新通过</span><span class="act-link del" onclick="delUser('${u.id}')">删除</span>`}</div></div>`;
 }
 
 function approveUser(id) { const u=users.find(x=>x.id===id); if(u){u.status='approved';save();toast('已通过');} renderUsers(); }
 function rejectUser(id) { const u=users.find(x=>x.id===id); if(u){u.status='rejected';save();toast('已拒绝');} renderUsers(); }
 function delUser(id) { if(!confirm('确定删除？'))return; users=users.filter(u=>u.id!==id); save(); toast('已删除'); renderUsers(); }
-
 function approveCourse(id) { const c=courses.find(x=>x.id===id); if(c){c.status='open';save();toast('课程已上架');} renderAll(); }
 function rejectCourse(id) { const c=courses.find(x=>x.id===id); if(c){c.status='cancelled';save();toast('课程已拒绝');} renderAll(); }
 function delCourse(id) { if(!confirm('确定删除？'))return; const c=courses.find(x=>x.id===id); if(c)c.status='cancelled';save();renderAll();toast('已删除'); }
@@ -488,19 +473,14 @@ function viewBks(cid) {
   const bks=bookings.filter(b=>b.cid===cid);
   const c=courses.find(x=>x.id===cid);
   ct.innerHTML=`${c?`<div class="card"><p class="text-bold">${fmtDs(c.date)}</p><p class="text-sm mt-4">⏰ ${c.start}-${c.end} | 👥 ${c.cur}/${c.max}</p></div>`:''}${bks.map(b=>`<div class="card"><div class="flex mb-8"><span class="tag ${b.status==='booked'?'tag-green':''}">${b.status==='booked'?'已预约':'已取消'}</span></div><div class="info-row"><span class="lbl">学员</span><span class="val">${b.child}</span></div>${b.grade?`<div class="info-row"><span class="lbl">年级</span><span class="val">${b.grade}</span></div>`:''}<div class="info-row"><span class="lbl">家长</span><span class="val">${b.parent}</span></div><div class="info-row"><span class="lbl">电话</span><span class="val tel">${b.phone}</span></div></div>`).join('')}`;
-  document.getElementById('filterBar').classList.add('hidden');
-  document.getElementById('view-course').classList.add('hidden');
-  document.getElementById('view-admin').classList.add('hidden');
-  ct.classList.remove('hidden');
-  document.getElementById('fab').classList.add('hidden');
+  document.getElementById('filterBar').classList.add('hidden');document.getElementById('view-course').classList.add('hidden');document.getElementById('view-admin').classList.add('hidden');
+  ct.classList.remove('hidden');document.getElementById('fab').classList.add('hidden');
   document.getElementById('tabBar').querySelectorAll('.tab').forEach(e=>e.classList.toggle('on',e.dataset.t==='booking'));
 }
 
-// ====== ADD COURSE ======
 function openAddCourse() {
   const tmr=new Date(T);tmr.setDate(tmr.getDate()+1);
-  document.getElementById('acDate').value=fmtDate(tmr);
-  document.getElementById('addModal').classList.remove('hidden');
+  document.getElementById('acDate').value=fmtDate(tmr);document.getElementById('addModal').classList.remove('hidden');
 }
 function closeAdd() { document.getElementById('addModal').classList.add('hidden'); }
 function addCourse() {
@@ -513,7 +493,7 @@ function addCourse() {
   renderAll();
 }
 
-// ====== RESTORE SESSION ======
+// Restore session
 if (curUser && curUser.status==='approved') {
   document.getElementById('loginView').classList.add('hidden');
   document.getElementById('mainView').classList.remove('hidden');
